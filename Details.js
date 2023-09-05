@@ -35,7 +35,7 @@ function Details(props) {
   ];
 
   const books = props.books;
-  const bookitems = data.map((ele) => <li key={ele.id}>{ele.data}</li>);
+  const bookitems = data.map((ele) => <li key={ele.id}>{ele.name}</li>);
 
   return (
     <div>
