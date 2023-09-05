@@ -4,26 +4,8 @@ import "./Productlist.css";
 import Details from "./Details";
 import { useNavigate } from "react-router-dom";
 
-
-
 const Product = (props) => {
   var { id, image, name, description, price } = props;
-  
-
-
-
-
-  // const showdetails = (e) => {
-  //   e.preventDefault();
-  //   alert("image has viewed");
-  //   console.log({ id });
-  // };
-
-  // let navigate = useNavigate();
-  // const routeChange = () => {
-  //   let path = `/details`;
-  //   navigate(path);
-  // };
 
    function fetchDetails(val){
     console.log("val", val);
@@ -33,12 +15,8 @@ const Product = (props) => {
       }
    }
 
-
-   
-  return (
-    
+  return (    
     <>
-      
       <div className="container-fluid">
         <div className="book">
           <div className="book- image">
