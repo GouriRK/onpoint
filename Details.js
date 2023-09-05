@@ -40,18 +40,6 @@ function Details(props) {
   return (
     <div>
       <ul>{bookitems}</ul>
-
-      {/* <ul>
-        {data.map((book) => (
-          <Productlist
-            id={data.id}
-            name={data.name}
-            author={data.author}
-            published
-            in={data.publishedin}
-          />
-        ))}
-      </ul> */}
     </div>
   );
 }
