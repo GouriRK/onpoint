@@ -17,6 +17,17 @@ const Product = (props) => {
 
   return (    
     <>
+    <Modal show={visible} onHide={() => setVisible(props)}>
+        <Modal.Header>
+          <Modal.Title>
+            <h1>Book details</h1>
+          </Modal.Title>
+        </Modal.Header>
+        <Modal.Body>
+          <Details />
+        </Modal.Body>
+        <Modal.Footer></Modal.Footer>
+      </Modal>
       <div className="container-fluid">
         <div className="book">
           <div className="book- image">
