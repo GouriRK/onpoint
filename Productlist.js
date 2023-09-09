@@ -1,33 +1,17 @@
 import React, { useState } from "react";
-import { Link, NavLink, Outlet } from "react-router-dom";
 import "./Productlist.css";
 import Details from "./Details";
-import { useNavigate } from "react-router-dom";
 
-const Product = (props) => {
+import { Link } from "react-router-dom";
+
+const Productlist = (props) => {
   var { id, image, name, description, price } = props;
 
-   function fetchDetails(val){
-    console.log("val", val);
-      if(val!== " "){
-        setVisible(true);
-        
-      }
-   }
+  
+  
 
-  return (    
+  return (
     <>
-    <Modal show={visible} onHide={() => setVisible(props)}>
-        <Modal.Header>
-          <Modal.Title>
-            <h1>Book details</h1>
-          </Modal.Title>
-        </Modal.Header>
-        <Modal.Body>
-          <Details />
-        </Modal.Body>
-        <Modal.Footer></Modal.Footer>
-      </Modal>
       <div className="container-fluid">
         <div className="book">
           <div className="book- image">
@@ -40,12 +24,19 @@ const Product = (props) => {
             <h1>{name}</h1>
             <p className="book-author">{description}</p>
             <p className="book-price">₹ {price} </p>
-            <button className="btn btn-primary" onClick={() => fetchDetails(true)}>View details </button>
+            {/* <button
+              className="btn btn-primary"
+              onClick={() => fetchDetails(true)}
+            >
+              View details{" "}
+            </button> */}
+            <Link to="/details" className="btn btn-primary">
+              View details
+            </Link>
           </div>
         </div>
       </div>
-      
     </>
   );
 };
-export default Product;
+export default Productlist;
